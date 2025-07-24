@@ -4,10 +4,8 @@
  */
 var findNonMinOrMax = function(nums) {
     
-    function s(a,b){
-        return a-b
-    }
-     nums.sort(s)
+    
+     nums.sort((a,b)=>a-b)
      if(nums.length<3){
          return -1
      }else{
