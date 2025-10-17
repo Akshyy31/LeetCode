@@ -4,9 +4,14 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        result = 0
-        for num in nums:
-            result ^= num
-        return result
+        temp = set()
+        result = nums[:]
+        for i in nums:
+            if i not in temp:
+                temp.add(i)
+            else:
+                result.remove(i)
+                result.remove(i)
+        return result[0]
                  
         
